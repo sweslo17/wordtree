@@ -9,6 +9,6 @@ tree = node("grandmother", [
 		])
 #tree.addlist(['xyz','abc'])
 tree.addnode('xyz')
-temp = tree.search('xyz')
+temp = tree.search('son')
 temp.addnode('abc')
 print tree
