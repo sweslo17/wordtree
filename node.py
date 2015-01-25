@@ -1,7 +1,10 @@
 class node(object):
 	def __init__(self, value, children = []):
 		self.value = value
-		self.children = children
+		if len(children) != 0:
+			self.children = children
+		else:
+			self.children = []
 	def __repr__(self,level=0):
 		ret = '\t'*level + repr(self.value) + '\n'
 		for child in self.children:
@@ -22,7 +25,7 @@ class node(object):
 		return result
 	def addnode(self,value):
 		self.children.append(node(value,[]))
-		#return self
+		return self.children[-1]
 	def addlist(self,value):
 		print value
 		'''if len(value) == 1:

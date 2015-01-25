@@ -1,5 +1,5 @@
 from node import node
-'''tree = node("grandmother", [
+tree = node("grandmother", [
 		node("daughter", [
 			node("granddaughter"),
 			node("grandson")]),
@@ -7,10 +7,10 @@ from node import node
 			node("granddaughter"),
 			node("grandson")]),
 		node("abc")
-		])'''
-tree = node('abc')
+		])
+#tree = node('abc',[node('qwe'),node('def')])
 #tree.addlist(['xyz','abc'])
 #temp_node = tree.search('abc')
 #temp_node.addnode('xyz')
-tree.addnode('xyz')
+temp = tree.search('abc').addnode('xyz')
 print tree
