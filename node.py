@@ -8,10 +8,10 @@ class node(object):
 			ret += child.__repr__(level+1)
 		return ret
 	def search(self,value):
-		print self.value
+		#print self.value
 		result = None
 		if self.value == value:
-			print "found"
+			#print "found"
 			result = self
 			return result
 		else:
@@ -21,7 +21,7 @@ class node(object):
 					break
 		return result
 	def addnode(self,value):
-		self.children.append(node(value))
+		self.children.append(node(value,[]))
 		#return self
 	def addlist(self,value):
 		print value
