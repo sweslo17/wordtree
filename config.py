@@ -1,9 +1,0 @@
-host='127.0.0.1'
-user="root"
-passwd='e7tlee'
-database='news'
-uni_thresh = 5
-bi_thresh = 5
-tri_thresh = 5
-four_thresh = 5
-five_thresh = 5
