@@ -23,11 +23,27 @@ class node(object):
 				if result is not None:
 					break
 		return result
+	def level_search(self,value):
+		result = None
+		for child in self.children:
+			if value == child.value:
+				return child
+		return None
 	def addnode(self,value):
 		self.children.append(node(value,[]))
 		return self.children[-1]
 	def addlist(self,value):
 		print value
+	def todic(self):
+		output = {}
+		output[self.value] = []
+		for child in self.children:
+			output[self.value].append(child.todic())
+		return output
+	def jsonify(self):
+		import json
+		return json.dumps(self.todic())
+		
 		'''if len(value) == 1:
 			self.addnode(node(value[0]))
 			return
